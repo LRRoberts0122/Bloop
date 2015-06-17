@@ -1,0 +1,59 @@
+/* Login Page Styles */
+#login {
+  height: 100%;
+  overflow: hidden; }
+
+#login {
+  background: #abddf6;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #abddf6 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #abddf6));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #abddf6 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #abddf6 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #abddf6 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #abddf6 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#abddf6',GradientType=0 );
+  /* IE6-9 */
+  background-repeat: no-repeat; }
+
+#login {
+  /* Typography */ }
+  #login .container {
+    margin-top: 60x;
+    width: 325px; }
+  #login .logo {
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url('../imgs/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 295px;
+    height: 225px; }
+  #login input, #login input:focus {
+    box-shadow: none !important;
+    border: 1px solid #C7E8F9 !important; }
+  #login input[type="email"], #login input[type="password"] {
+    height: 40px;
+    box-shadow: none; }
+  #login input[type="email"] {
+    border-radius: 3px 3px 0 0;
+    border-bottom: none !important; }
+  #login input[type="password"] {
+    border-radius: 0 0 3px 3px; }
+  #login button {
+    margin-top: 20px; }
+  #login h2, #login p, #login button, #login input[type="email"], #login input[type="password"] {
+    font-family: "Source Sans Pro", sans-serif; }
+  #login h2, #login button {
+    font-weight: bold !important; }
+  #login .loginInfo {
+    font-style: italic;
+    font-size: 9pt;
+    margin-top: 20px;
+    text-align: center; }

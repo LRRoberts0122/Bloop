@@ -1,0 +1,99 @@
+/* Dashboard Styles */
+#dashboard {
+  /*
+	 * Base structure
+	 */
+  /*
+	 * Top navigation
+	 * Hide default border to remove 1px line.
+	 */
+  /*
+	 * Sidebar
+	 */
+  /* Hide for mobile, show later */
+  /* Sidebar navigation */
+  /*
+	 * Main content
+	 */
+  /* ADMIN */ }
+  #dashboard .sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; }
+  #dashboard .navbar-fixed-top {
+    border: 0; }
+  #dashboard .sidebar {
+    display: none; }
+  @media (min-width: 768px) {
+    #dashboard .sidebar {
+      position: fixed;
+      top: 51px;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      padding: 20px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      /* Scrollable contents if viewport is shorter than content. */
+      background-color: #f5f5f5;
+      border-right: 1px solid #eee; }
+ }
+  #dashboard .nav-sidebar {
+    margin-right: -21px;
+    /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px; }
+  #dashboard .nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px; }
+  #dashboard .nav-sidebar > .active > a, #dashboard .nav-sidebar > .active > a:hover, #dashboard .nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca; }
+  #dashboard .main {
+    padding: 20px; }
+  @media (min-width: 768px) {
+    #dashboard .main {
+      padding-right: 40px;
+      padding-left: 40px; }
+ }
+  #dashboard .main .page-header {
+    margin-top: 0; }
+  #dashboard .disable_link {
+    pointer-events: none !important; }
+  #dashboard .disable_icon {
+    color: #CCC !important; }
+  #dashboard textarea.editable-input {
+    width: 355px;
+    height: 175px; }
+  #dashboard .progress {
+    margin-bottom: 0 !important; }
+  #dashboard .placeholders {
+    margin-bottom: 30px;
+    text-align: center; }
+  #dashboard .placeholders h4 {
+    margin-bottom: 0; }
+  #dashboard .placeholder {
+    margin-bottom: 20px; }
+  #dashboard .placeholder img {
+    display: inline-block;
+    border-radius: 50%; }
+  #dashboard #createUserForm label {
+    font-weight: 400 !important;
+    text-align: left; }
+  #dashboard #dateSearchForm {
+    margin-bottom: 0;
+    width: 300px !important; }
+  #dashboard #dateSearchForm p {
+    color: #FFF;
+    float: left;
+    line-height: 32px;
+    margin-right: 10px; }
+  #dashboard #dateSearchForm p:first-of-type {
+    margin-left: 75px; }
+  #dashboard #messageArchive {
+    height: 500px;
+    overflow-y: scroll; }
+  #dashboard #messageArchive div.archivedMessage p.name {
+    margin: 0 !important; }
+  #dashboard #messageButtons {
+    float: right !important; }

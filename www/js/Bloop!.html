@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://localhost:8888/sms/project/www/#/dashboard/ticket/-Jaz8elRJghJl7DJ8Wti -->
+<html ng-app="bloop" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+	<meta charset="UTF-8">
+	<title>Bloop!</title>
+	
+	<!-- Angular -->
+	<script type="text/javascript" src="./Bloop!_files/angular.min.js"></script>
+	
+	<!-- AngularRoute -->
+	<script type="text/javascript" src="./Bloop!_files/angular-route.min.js"></script>
+	
+	<!-- FireBase -->
+	<script src="./Bloop!_files/firebase.js"></script>
+	
+	<!-- AngularFire -->
+	<script src="./Bloop!_files/angularfire.js"></script>
+	
+	<!-- Scroll Glue -->
+	<script src="./Bloop!_files/dir-paginate.js"></script>
+	
+	<!-- Angular X-Editable -->
+	<link href="http://localhost:8888/sms/project/www/bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+	<script src="./Bloop!_files/xeditable.js"></script>
+	
+	<!-- Simple Login -->
+	<script src="./Bloop!_files/firebase-simple-login.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./Bloop!_files/main.css">
+</head>
+<body id="home" cz-shortcut-listen="true">
+	<!-- ngView: undefined --><ng-view class="ng-scope"><div ng-controller="AccountCtrl" id="dashboard" class="ng-scope">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	    <div class="container-fluid">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="http://localhost:8888/sms/project/www/#/dashboard">Bloop Dashboard</a>
+	        </div>
+	
+	        <div id="navbar" class="navbar-collapse collapse">	
+		        <form class="navbar-form navbar-left ng-pristine ng-valid" id="dateSearchForm">
+				    <div class="row">
+					    <p>From</p>
+				        <div class="col-xs-3">
+				            <div class="input-group">
+				                <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+				                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+				            </div>
+				        </div>
+				        <p>to</p>
+				        <div class="col-xs-3">
+				            <div class="input-group">
+				                <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+				                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+				            </div>
+				        </div>
+				        <p>with status</p>
+				        <div class="col-xs-3">
+				            <div class="input-group">
+				                <select id="tf_status" class="form-control">
+									<option value="Open">Open</option>
+									<option value="Taken">Taken</option>
+									<option value="Closed">Closed</option>
+									<option value="Unresolved">Unresolved</option>
+								</select>
+				            </div>
+				        </div>
+				    </div>
+				</form>
+	            <form class="navbar-form navbar-right ng-pristine ng-valid">
+	                <input type="text" class="form-control" placeholder="Reference ID...">
+	            </form>
+	        </div>
+	    </div>
+	</nav>
+	
+	<div class="container-fluid">
+	    <div class="row">
+	        <div class="col-sm-3 col-md-2 sidebar">
+	            <ul class="nav nav-sidebar">
+	                <li class="active"><a href="http://localhost:8888/sms/project/www/#/dashboard">View Tickets</a></li>
+	                <li><a href="http://localhost:8888/sms/project/www/#/myaccount">My Account</a></li>
+	                <li><a href="http://localhost:8888/sms/project/www/#/admin">Administration</a></li>
+	                <li><a href="http://localhost:8888/sms/project/www/#/">Logout</a></li>
+	            </ul>
+	        </div>
+	
+	        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">Ticket #ZJX210XTF809</h1>
+				<div class="col-md-5">
+					<div class="table-responsive">
+						<p><b>Ticket Information</b></p><table class="table">
+							
+							<tbody>
+						        <tr>
+							        <td class="col-sm-5">Reference ID</td>
+							        <td><b class="ng-binding">GLEF7H1R6A4W</b></td>
+						        </tr>
+						        <tr>
+							        <td>Status</td>
+							        <td>
+								        <b><a href="http://localhost:8888/sms/project/www/#" editable-select="ticket.status" buttons="no" e-ng-options="s.value as s.text for s in statuses" class="ng-scope ng-binding editable editable-click editable-hide">TAKEN</a><form class="form-inline editable-wrap editable-select ng-scope ng-pristine ng-valid" role="form" editable-form="$form" blur="cancel"><div class="editable-controls form-group" ng-class="{&#39;has-error&#39;: $error}"><select ng-options="s.value as s.text for s in statuses" class="editable-input form-control input-sm ng-pristine ng-valid" ng-model="$data" ng-change="saveData($data, $form.$editables[0].name)"><option value="0">OPEN</option><option value="1" selected="selected">TAKEN</option><option value="2">CLOSED</option></select><div class="editable-error help-block ng-binding ng-hide" ng-show="$error" ng-bind="$error"></div></div></form></b></td>
+								        <!--
+<div>
+											<a href="#" editable-select="ticket.status" buttons="no" e-ng-options="s.value as s.text for s in statuses">
+											{{ showStatus() }}
+											</a>
+										</div>
+-->
+							        <td><b class="ng-binding">TAKEN</b></td>
+						        </tr>
+						        <tr>
+							        <td>Date</td>
+							        <td><b class="ng-binding">11/17/2014</b></td>
+						        </tr>
+						        <tr>
+							        <td>Name</td>
+							        <!--<td><b editable-text="ticket.name">{{ticket.name || "empty"}}</b></td>-->
+							        <td><b><a href="http://localhost:8888/sms/project/www/#" editable-text="ticket.name" class="ng-scope ng-binding editable editable-click">N/A</a></b></td>
+						        </tr>
+						        <tr>
+							        <td>Email Address</td>
+							        <td><b><a href="http://localhost:8888/sms/project/www/#" editable-text="ticket.email" class="ng-scope ng-binding editable editable-click">N/A</a></b></td>
+						        </tr>
+						        <tr>
+							        <td>Operator</td>
+							        <td><b class="ng-binding">Lindsay</b></td>
+						        </tr>
+					        </tbody>
+						</table>
+					</div>
+					
+					<div>
+						<p><b>Account Notes</b></p>
+						<a href="http://localhost:8888/sms/project/www/#" editable-textarea="ticket.notes" class="ng-scope editable editable-click editable-empty">
+							<pre class="ng-binding">No Notes to Display</pre>
+						</a>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-md-offset-1">
+					<div class="table-responsive">
+						<p><b>Message Archive</b></p>
+						
+						<div id="messageArchive">
+							<!-- ngRepeat: post in currentArchive --><div class="archivedMessage ng-scope" ng-repeat="post in currentArchive">
+								<p class="name"><i class="ng-binding">Guest:</i></p>
+								<p class="ng-binding">RAWR</p>
+							</div><!-- end ngRepeat: post in currentArchive -->
+						</div>
+						
+						<div id="db-chat">
+							<textarea ng-hide="ticket.status == &#39;CLOSED&#39;" class="form-control ng-pristine ng-valid" ng-enter="post(&#39;Lindsay&#39;)" ng-model="$parent.repChatText"></textarea>
+						</div>
+					</div>
+
+				</div>
+	        </div>
+	    </div>
+	</div>
+</div>
+</ng-view>  
+		
+	<!-- Bootstrap -->
+	<script src="./Bloop!_files/jquery.min.js"></script>
+	<script src="./Bloop!_files/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./Bloop!_files/ie10-viewport-bug-workaround.min.js"></script>
+	
+	<!-- Compiled JavaScript -->
+	<script type="text/javascript" src="./Bloop!_files/main.min.js"></script>
+
+</body></html>

@@ -1,0 +1,19 @@
+<div id="login">
+	
+<!-- LOGIN -->
+<div class="container">
+	<form class="form-signin" role="form">
+		<a href="#/"><h1 class="logo">Bloop</h1></a>
+		<h2 class="form-signin-heading">Control Panel Login</h2>
+		<!-- ERRROR -->
+		<div ng-show="error" class="alert alert-danger" role="alert">
+			<p><i class="fa fa-exclamation-circle"></i><span class="sr-only">Error:</span> {{error.message}}</p>
+		</div>
+		<input type="email" class="form-control" placeholder="Email address" ng-model="$parent.email" required="" autofocus="">
+		<input type="password" class="form-control" placeholder="Password" ng-model="$parent.password" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Sign in</button>
+		<p class="loginInfo"><b>Login:</b> demo@designbyfish.com<br /> <b>Password:</b> bloop</p>
+	</form>
+
+</div> <!-- /container -->
+</div>

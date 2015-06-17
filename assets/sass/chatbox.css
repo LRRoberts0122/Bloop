@@ -1,0 +1,134 @@
+/* CHATBOX STYLES */
+.chatbox {
+  width: 300px;
+  height: 375px;
+  font-family: sans-serif;
+  font-weight: 300;
+  border: 1px solid #2185c5;
+  border-radius: 5px 5px 0 0;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  cursor: pointer;
+  z-index: 5; }
+
+.chatHeader {
+  background-color: #2185c5;
+  height: 40px;
+  border-radius: 3px 3px 0 0; }
+
+.chatHeader p {
+  margin-top: 10px;
+  padding: 0 10px; }
+
+.chatHeader p, .chatLinks a, .chatRep p {
+  color: #FFF; }
+
+.chatTitle {
+  float: left;
+  margin: 0 !important;
+  padding: 10px 160px 10px 10px !important; }
+
+.chatLinks {
+  float: right; }
+
+.chatLinks a {
+  text-decoration: none; }
+
+.chatRep {
+  background-color: #3e454c; }
+
+.chatRep p {
+  margin: 0;
+  padding: 10px;
+  font-size: 10pt; }
+
+.chatRepName {
+  font-weight: 700;
+  color: #f47d67; }
+
+.chatText {
+  overflow-y: scroll;
+  background-color: #FFF;
+  font-size: 10pt;
+  padding: 5px 10px;
+  height: 245px;
+  min-height: 245px;
+  max-height: 245px; }
+
+.chatText p {
+  margin: 10px 0;
+  padding: 6px 13px; }
+
+.chatTicketInfo {
+  font-style: italic;
+  font-size: 9pt;
+  color: #666666;
+  padding: 0 !important;
+  margin: 11px 0 !important; }
+
+.chatTicketID {
+  font-weight: 700; }
+
+.repMessage {
+  background-color: #f47d67;
+  color: #FFF;
+  border-radius: 20px;
+  position: relative; }
+
+.repMessage:before {
+  display: block;
+  content: url('../imgs/quote1.svg') !important;
+  /* with class ModalCarrot ??*/
+  width: 20px;
+  height: auto;
+  position: absolute;
+  /*or absolute*/
+  z-index: 0;
+  /*a number that's more than the modal box*/
+  left: -7px;
+  bottom: -3px; }
+
+.guestMessage {
+  background-color: #2185c5;
+  color: #FFF;
+  border-radius: 20px;
+  position: relative;
+  text-align: right; }
+
+.guestMessage:after {
+  display: block;
+  content: url('../imgs/quote2.svg') !important;
+  width: 20px;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  right: -7px;
+  bottom: -3px; }
+
+.chatInput {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0; }
+
+.chatTextArea {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #2185c5;
+  width: 298px;
+  outline: none;
+  height: 30px;
+  resize: none; }
+
+.hideChat {
+  bottom: -336px !important;
+  cursor: pointer; }
+
+.closeChat {
+  z-index: 10;
+  display: block;
+  width: 10px;
+  height: 20px; }

@@ -1,0 +1,90 @@
+<div id="dashboard">
+<!-- HEADER -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="#/dashboard">Bloop Dashboard</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+	        <form class="navbar-form navbar-left" id="dateSearchForm">
+				        <p>Status</p>
+				        <div>
+				            <div class="input-group">
+				                <select id="tf_status" class="form-control" ng-model="search.status">
+									<option>Open</option>
+									<option>Taken</option>
+									<option>Closed</option>
+								</select>
+				            </div>
+				        </div>
+				</form>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Reference ID..." ng-model="search.id">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT AREA -->
+<div class="container-fluid">
+    <div class="row">
+	    
+	    <!-- SIDEBAR MENU -->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#/dashboard">View Tickets</a></li>
+                <li><a href="#/myaccount">My Account</a></li>
+                <li><a href="#/admin" ng-show="theUser.type == 'Admin'">Administration</a></li>
+                <li><a href="#/" ng-click="logout()">Logout</a></li>
+            </ul>
+        </div>
+		
+		<!-- VIEW TICKETS CONTENT -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1 class="page-header">View Tickets</h1>
+			<div class="table-responsive">
+			    <table class="table table-striped">
+			        <thead>
+			            <tr>
+			                <th>Reference ID</th>
+			                <th>Status</th>
+			                <th>Date</th>
+			                <th>Name</th>
+			                <th>Email</th>
+			                <th>Transcript</th>
+			                <th>Operator</th>
+			                <th></th>
+			            </tr>
+			        </thead>
+			
+			        <tbody>
+				        <tr dir-paginate="ticket in tickets | reverse | itemsPerPage: 14 | filter: search">
+					        <td>{{ticket.id}}</td>
+					        <td>{{ticket.status}}</td>
+					        <td>{{ticket.date}}</td>
+					        <td>{{ticket.name}}</td>
+					        <td>{{ticket.email}}</td>
+					        <td>
+						        <a ng-show="ticket.status == 'TAKEN' && ticket.opName != theUser.firstname" class="disable_link disable_icon" href="#/dashboard/ticket/{{ticket.$id}}">View Record</a>
+					        	<a ng-hide="ticket.status == 'TAKEN' && ticket.opName != theUser.firstname" href="#/dashboard/ticket/{{ticket.$id}}">View Record</a>
+					        </td>
+					        <td>{{ticket.opName}}</td>
+					        <td>
+						        <a ng-show="ticket.status == 'TAKEN' && ticket.opName != theUser.firstname" href="#/dashboard/ticket/{{ticket.$id}}" ng-click="assignTicket()" class="disable_link">
+							        <i class="fa fa-arrow-circle-right disable_icon"></i>
+							    </a>
+							    <a ng-hide="ticket.status == 'TAKEN' && ticket.opName != theUser.firstname" href="#/dashboard/ticket/{{ticket.$id}}" ng-click="assignTicket()">
+							        <i class="fa fa-arrow-circle-right"></i>
+							    </a>
+							</td>
+				        </tr>
+			        </tbody>
+			    </table>
+			</div>
+			
+			<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="directives/pagination/dirPagination.tpl.html"></dir-pagination-controls>
+        </div>
+    </div>
+</div>
+</div>

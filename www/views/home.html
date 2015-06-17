@@ -1,0 +1,87 @@
+<div id="frontend">
+	
+<!-- HEADER / NAVIGATION -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h1 class="logo">Bloop</h1></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <a href="#/login"><i class="fa fa-cog"></i> Demo</a>
+        <a href="#"><i class="fa fa-download"></i> Download</a>
+        <a href="#"><i class="fa fa-code"></i> Documentation</a>
+        <a href="#"><i class="fa fa-envelope"></i> Contact</a>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<!-- CALL TO ACTION -->
+<div class="jumbotron">
+	<div class="container">
+		<h1>Engage your visitors. Get the only live support chat for your website that's <strong>truly free.</strong></h1>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Download <img src="imgs/bloop.svg" alt="Bloop" id="bloopBtn" /></a></p>
+	</div>
+</div>
+
+<!-- CONTENT AREA -->
+<div class="container">
+
+	<!-- FEATURES -->
+	<div class="row">
+		<h1 id="benefitsTitle">No Signup. No Credit Card. No Restrictions.</h1>
+		<div class="col-md-4">
+			<h2>Doesn't Cost Anything!</h2>
+			<p>Bloop is <strong>truly free.</strong> No pricing tables, hidden fees, or premium features. It's simply all free. You'll get everything you want in a chat support client without the price tag. Switch to Bloop and start saving!</p>
+			<p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2>Unlimited Features</h2>
+			<p>Get <strong>unlimited domains, seats, and chats</strong> all for free. But that's not all. You'll also be able to <strong>customize your theme and branding</strong>, and have access to a built-in control panel and admin dashboard.</p>
+			<p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2>Easy Peasie</h2>
+			<p>Bloop is easy to install, easy to customize, and easy to use. But if you do run into a problem, we've made some pretty thorough documentation to guide you through just about any aspect of Bloop, just in case you need it.</p>
+			<p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+		</div>
+	</div>
+
+	<hr>
+	
+	<!-- FOOTER -->
+	<footer>
+		<p>© 2014 DesignByFish.com  |  <img src="imgs/bloop-colored.svg" alt="Bloop" /> is powered by fishies. Particularly this <a href="#">one</a>. <img src="imgs/goldfish.svg" alt="goldfish" /></p>
+	</footer>
+  
+	<!-- CHATBOX -->
+	<div ng-class="{'chatbox': toggleState, 'chatbox hideChat': !toggleState}" ng-init="toggleState = false; ticketExists = false; exit = false;">
+		<div class="chatHeader">
+			<p class="chatTitle" ng-click="checkTicket(); toggle();"><i class="fa fa-comment"></i> Support Chat</p>
+			<p class="chatLinks">
+				<a href="#" ng-hide="toggleState == false" class="closeChat" ng-click="close(); toggle();">X</a>
+			</p>
+		</div>
+		
+		<div class="chatRep">
+			<p ng-hide="currentChat.opName != 'Unassigned'">Please wait for the next representative...</p>
+			<p ng-show="currentChat.opName != 'Unassigned'">You're speaking with <span class="chatRepName">{{currentChat.opName}}</span>.</p>
+		</div>
+		
+		<div class="chatText">
+			<p class="chatTicketInfo">Your reference ID is: <span class="chatTicketID">{{ticketObject.id}}</span></p>
+			<p class="{{message.class}}" ng-repeat="message in currentChat.archive">{{message.text}}</p>
+		</div>
+		
+		<div class="chatInput">
+			<textarea class="chatTextArea" ng-enter="post('Guest')" ng-model="chatText"></textarea>
+		</div>
+	</div>
+  
+</div> 
+</div>

@@ -1,0 +1,31 @@
+{
+  "name": "Bloop",
+  "version": "0.0.1",
+  "authors": [
+    "Lindsay Roberts <lrroberts0122@gmail.com>"
+  ],
+  "description": "The truly free live chat for startups.",
+  "main": "index.html",
+  "keywords": [
+    "live",
+    "chat",
+    "free",
+    "bloop",
+    "designbyfish.com"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.0",
+    "angular-utils-pagination": "~0.3.2",
+    "angular-xeditable": "~0.1.8"
+  }
+}

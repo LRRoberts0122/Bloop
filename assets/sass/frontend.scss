@@ -1,0 +1,131 @@
+/* Header */
+/*
+#frontend {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+*/
+#frontend {
+	.logo {
+		text-indent: 120%;
+		white-space: nowrap;
+		overflow: hidden;
+		background-image: url('../imgs/logo-circle.svg');
+		background-repeat: no-repeat;
+		background-size: 100px;
+		width: 100px !important;
+		height: 85px !important;
+		margin: 0;
+	}
+	
+	#navbar {
+		float: right;
+		border: none !important;
+		background-color: #FFF;
+	}
+	
+	#navbar a {
+		display: block;
+		float: left;
+		text-decoration: none;
+		padding: 16px;
+	}
+	
+	#navbar a:hover {
+		color: #FFF;
+		background-color: #2185c5;
+	}
+	
+	.navbar-header .navbar-brand:hover {
+		background-color: #FFF !important;
+	}
+	
+	.navbar-brand {
+		padding-top: 5px !important;
+	}
+	
+	/* Call to Action */
+	.jumbotron {
+		background: #abddf6; /* Old browsers */
+		background: -moz-linear-gradient(top,  #abddf6 0%, #ecf7fd 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#abddf6), color-stop(100%,#ecf7fd)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #abddf6 0%,#ecf7fd 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #abddf6 0%,#ecf7fd 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #abddf6 0%,#ecf7fd 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #abddf6 0%,#ecf7fd 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abddf6', endColorstr='#ecf7fd',GradientType=0 ); /* IE6-9 */
+		background-repeat: no-repeat;
+	}
+	
+	.jumbotron h1 {
+		color: #FFF;
+		text-shadow: 1px 1px 0px rgba(23, 132, 200, .57);
+		font-size: 32pt !important ;
+	}
+	
+	.jumbotron p {
+		background: 
+			url('../imgs/goldfish.svg') 130px 40px / 50px 50px no-repeat, 
+			url('../imgs/arrow.svg') 215px 0px / 50px 100px no-repeat;
+		width: 300px;
+		margin: 0 auto !important;
+		padding-top: 70px;
+		margin-top: 30px;
+		text-align: center;
+	}
+	
+	.jumbotron a {
+		width: 234px;
+		line-height: 26pt;
+	}
+	
+	#bloopBtn {
+		height: 30px;
+		width: auto;
+		line-height: 18pt;
+	}
+	
+	/* Content Area */
+	#benefitsTitle {
+		font-size: 24pt !important;
+		margin: 0 !important;
+		margin-bottom: 30px !important;
+		padding-top: 20px !important;
+	}
+	
+	/* Footer */
+	footer p img {
+		height: 15px;
+		width: auto;
+	}
+	
+	footer p img:last-of-type {
+	    -moz-transform: scaleX(-1);
+	    -o-transform: scaleX(-1);
+	    -webkit-transform: scaleX(-1);
+	    transform: scaleX(-1);
+	    filter: FlipH;
+	    -ms-filter: "FlipH";
+	}
+	
+	/* Typography */
+	input, button, p, .jumbotron .container a {
+		font-family: "Source Sans Pro", sans-serif;
+	}
+	
+	h1, h2 {
+		font-family: "BPreplay", sans-serif;
+	}
+	
+	h1 {
+		color: #f47d67;
+		font-size: 32pt !important;
+		text-align: center;
+		margin-bottom: 0;
+	}
+	
+	h2 {
+		color: #85cdf2;
+		font-size: 18pt;
+	}	
+}
